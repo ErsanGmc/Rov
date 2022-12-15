@@ -31,9 +31,9 @@ while camera.isOpened():
     upper=np.array([H2,S2,V2])
     
     mask=cv2.inRange(HSV,lower,upper)
-    cv2.imshow("Video_without_Mask",HSV)
+    cv2.imshow("HSV_Görüntü",HSV)
     masked_image=cv2.bitwise_and(frame,frame,mask=mask)
-    cv2.imshow("Video_with_Mask",masked_image)
+    cv2.imshow("Kirmizi_Filtreli",masked_image)
     
 
     # Kameradan görüntü alınırsa
