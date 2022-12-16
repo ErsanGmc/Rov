@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture("240underwater.mp4")
 def nothing(x):
     pass
 cv2.namedWindow("frame")
