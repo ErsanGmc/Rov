@@ -11,6 +11,7 @@ if not camera.isOpened():
 
 while True:
     ret,frame =camera.read()
+    cv2.imshow("test",frame)
     frame=cv2.resize(frame,(540,400),fx=0,fy=0,interpolation=cv2.INTER_CUBIC)
     frame=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     frame=cv2.medianBlur(frame,5)
