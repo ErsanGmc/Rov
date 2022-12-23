@@ -5,9 +5,6 @@ import numpy as np
 # camera=cv2.VideoCapture("test2.mp4")
 camera=cv2.VideoCapture(0)
 
-# out = cv2.VideoWriter('outpy2.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (680,400))
-
-
 
 while True:
     ret,frame =camera.read()
@@ -17,7 +14,6 @@ while True:
     mask=cv2.inRange(hsv,lower_red,upper_red)
     frame=cv2.bitwise_and(frame,frame,mask=mask)
 
-    # frame=cv2.resize(frame,(540,400),fx=0,fy=0,interpolation=cv2.INTER_CUBIC)
     frame=cv2.cvtColor(frame,cv2.COLOR_HSV2BGR)
     frame=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     frame=cv2.medianBlur(frame,5)
@@ -41,5 +37,5 @@ while True:
         print("Kamera sonlandirildi")
         break
 camera.release()
-out.release()
+
 cv2.destroyAllWindows()
